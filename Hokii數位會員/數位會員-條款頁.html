@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="tw">
+
+<head>
+    <meta charset="UTF-8">
+    <title>數位會員</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta itemprop="image" content="">
+    <!-- import reset -->
+    <link rel="stylesheet" href="../css/reset.css">
+    <!-- import bootstrap -->
+    <link rel="stylesheet" href="../bootstrap/bootstrap.min.css">
+    <!-- import fontawesome -->
+    <link rel="stylesheet" href="../fontawesome/css/all.css">
+    <!-- import font family -->
+    <link rel="stylesheet" href="../css/fonts.css">
+    <!-- import css -->
+    <link rel="stylesheet" href="../css/hokii-digital-member.css">
+</head>
+
+<body>
+    <section class="wrap">
+        <img alt="heade" src="../img/Hokii數位會員/Group 9484.svg">
+        <div class="wrap-content">
+            <div class="stepbar"><img alt="step1" src="../img/Hokii數位會員/step1.svg"></div>
+            <!-- 內容 -->
+            <div class="terms-content">
+                <div class="terms-card-title">Hokii數位會員 權益約定條款</div>
+                <div class="terms-content-card">
+                    <div id="terms-content" class="terms-content-txt">
+                        <p>一、數位會員定義
+                            <br>茲因申請人向臺灣中小企業銀行股份有限公司(下稱臺灣企銀)申請註冊為Hokii數位會員，已充分瞭解並同意遵守Hokii數位會員權益約定條款(下稱本會員條款)所載之約定事項，於申請人在臺灣企銀行動銀行Hokii數位會員專區或臺灣企銀其他數位服務中，就本會員條款勾選「同意」，即表示同意本會員條款並完全接受Hokii數位會員現有與未來衍生的服務項目。
+                        </p>
+                        <p>二、申請資格及方式
+                            <br>凡自然人本人持有有效之臺灣企銀臺幣活期性儲蓄存款帳戶(含一般帳戶或Hokii數位存款帳戶)，且已申請本行網路銀行及開通行動銀行APP，即有資格申請註冊Hokii數位會員。申請人需登入臺灣企銀行動銀行APP，至Hokii數位會員申請專區註冊成為臺灣企銀Hokii數位會員。
+                        </p>
+                        <p>三、 會員權益
+                            <br>所有Hokii數位會員相關權益及優惠項目皆以本行官網公告為主，臺灣企銀保有調整之權利。
+                        </p>
+                        <p> 四、會員資格之終止：
+                            <br>若會員結清本行所有臺幣活期性儲蓄存款帳戶，則其Hokii數位會員資格將一併終止。會員資格終止後，如欲重新取得Hokii數位會員資格，須重新至行動銀行APP會員申請頁面完成申請程序。
+                        </p>
+                        <p>五、與第三人網站連結
+                            <br>於臺灣企銀Hokii數位會員專區及其他相關活動網頁中瀏覽的廣告文字、圖像與內容之說明、展示樣品或其他銷售資訊，可能係由各該廣告商或商品及服務提供者所設計與提出，申請人應注意點選瀏覽該廣告文字可能連結至第三人網站，該網站則可能涵蓋不屬於臺灣企銀所得控制及負責範圍。
+                        </p>
+                        <p>六、其他
+                            <br>如申請人加入臺灣企銀其他活動而另同意相關使用規範或約定時，則應同時遵守各該服務之使用及相關規定。本會員條款如有未盡事宜，悉依臺灣企銀「個人網路銀行暨行動銀行服務約定條款」或其他相關約定條款辦理。
+                        </p>
+                        <p>七、準據法及管轄法院
+                            <br>本約定條款之準據法為中華民國法律，立約人若因本約定條款涉訟時，同意以立約所在地之法院為第一審管轄法院，惟不得排除民事訴訟法第436條之9小額訴訟管轄法院及消費保護法第47條之適用。
+                        </p>
+                    </div>
+                    <div id="down-icon" class="terms-content-btn" onclick="downFunction()">
+                        <p>請滑動頁面詳閱本條款所載完成內容</p>
+                        <img alt="down" src="../img/Hokii數位會員/down.svg">
+                    </div>
+
+                    <div class="terms-checkbox">
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="" id="submit" disabled>
+                            <span class="terms-check-label"><img alt="check" src="../img/Hokii數位會員/check.svg"
+                                    class="check-icon"></span>
+                            本人已審閱並同意個人資料蒐集、處理及利用告知事項
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="content-btn-box">
+                <button class="hokii-content-btn blue">取消</button>
+                <button class="hokii-content-btn org" onclick="location.href='數位會員-條款頁2.html'">下一步</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- import jquery-->
+    <script type="text/javascript" language="javascript" src="../css/jquery-3.3.1.slim.min.js"></script>
+    <script type="text/javascript" language="javascript" src="../css/jquery-3.3.1.js"></script>
+    <script type="text/javascript" language="javascript" src="../css/popper.min.js"></script>
+
+    <script type="text/javascript">
+        $(function () {
+            // 先取得 #terms 及其各種高度
+            // 判斷是否停用 $submit
+            var $terms = $('#terms-content'),
+                _height = $terms.height(),
+
+                _scrollHeight = $terms.prop('scrollHeight'),
+                _maxScrollHeight = _scrollHeight - _height - 20;
+            _least = 0, // 距離底部多少就可以, 0 表示得完全到底部
+                $submit = $('#submit').attr('disabled', _maxScrollHeight > _least);
+
+            // 當 #terms 中捲軸捲動時
+            $('#terms-content').scroll(function () {
+                var $this = $(this);
+                var $down = $('#down-icon')
+                // 如果高度已經達到指定的高度就啟用 $submit
+                if (_maxScrollHeight - $this.scrollTop() <= _least) {
+                    $submit.attr('disabled', false);
+                    $down.animate({ height: 'toggle' }, 400, function () {
+                        $(this).hide();
+                    });
+                }
+            });
+        });
+
+    </script>
+    <script type="text/javascript">
+        function downFunction() {
+            $('#terms-content').animate({
+                scrollTop: $('#terms-content').get(0).scrollHeight
+            }, 2000);
+        }
+    </script>
+</body>
+
+</html>
